@@ -20,6 +20,7 @@ body {
     border-radius: 20px;
     border: none;
     position: relative;
+    float: left;
 }
 
 .setBtn {
@@ -143,9 +144,21 @@ body {
 }
 
 .aside1 {
-
+    position: absolute;
+    left: 0;
+    top: 50px; /* 상단 여백 조정 */
+    bottom: 50px; /* 하단 여백 조정 */
+    width: 200px;
+    background: white;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .aside2 {
-
+    position: absolute;
+    right: 0;
+    top: 50px; /* 상단 여백 조정 */
+    bottom: 50px; /* 하단 여백 조정 */
+    width: 200px;
+    background: white;
+    border-radius: 20px 0px 0px 20px;
 }

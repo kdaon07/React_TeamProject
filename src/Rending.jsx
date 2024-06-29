@@ -10,11 +10,11 @@ const Rending = () => {
 
   return (
     <div>
+      <div className='aside1'></div>
       <div className='box'>
         <button className='setBtn' onClick={() => console.log(value)}>세팅</button><br />
         <Cal value={value} onChange={onChange} />
       </div>
-      <div className='aside1'></div>
       <div className='aside2'></div>
     </div>
   );
