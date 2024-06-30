@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -8,14 +9,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1250px;
-    height: 800px;
+    width: 1100px;
+    height: 700px;
     background: white;
     border-radius: 20px;
     border: none;
@@ -24,7 +28,7 @@ body {
 }
 
 .setBtn {
-    top:50px;
+    top: 50px;
     left: 50px;
     position: absolute;
     width: 80px;
@@ -37,19 +41,19 @@ body {
     cursor: pointer;
 }
 
-.setBtn:hover{
+.setBtn:hover {
     background: #999999;
     border: 3px solid #999999;
 }
 
 .react-calendar {
     margin: 0 auto;
-    width: 1000px;
-    height: 650px;
+    width: 800px;
+    height: 500px;
     background: white;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 2.125em;
+    line-height: 1.125em;
 }
 
 .react-calendar__navigation {
@@ -64,8 +68,8 @@ body {
 }
 
 .react-calendar__navigation button {
-    font-weight: 1000;
-    font-size: 4.0em;
+    font-weight: 800;
+    font-size: 3.0em;
     background: none;
     border: none;
     padding: 0 0.5em;
@@ -100,7 +104,7 @@ body {
 .react-calendar__month-view__weekdays abbr {
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.0em;
+    font-size: 1.5em;
 }
 
 .react-calendar__tile {
@@ -110,7 +114,7 @@ body {
     text-align: center;
     line-height: 16px;
     font: inherit;
-    font-size: 2.833em;
+    font-size: 1.8em;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -146,19 +150,49 @@ body {
 .aside1 {
     position: absolute;
     left: 0;
-    top: 50px; /* 상단 여백 조정 */
-    bottom: 50px; /* 하단 여백 조정 */
-    width: 200px;
+    top: 100px;
+    bottom: 100px;
+    width: 100px;
     background: white;
     border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
 
-.aside2 {
-    position: absolute;
-    right: 0;
-    top: 50px; /* 상단 여백 조정 */
-    bottom: 50px; /* 하단 여백 조정 */
-    width: 200px;
-    background: white;
-    border-radius: 20px 0px 0px 20px;
+
+.react-calendar__navigation__prev-button {
+    position: fixed;
+    font-weight: 800;
+    font-size: 3.0em;
+    background: white !important;
+    padding: 0.5em;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    color: #000000;
+    display: flex;
+    left: 0;
+    height: 75% !important;
+    top: 100px;
+    bottom: 0px;
+    align-items: center;
 }
+
+.react-calendar__navigation__next-button {
+    position: fixed;
+    font-weight: 800;
+    font-size: 3.0em;
+    background: white !important;
+    padding: 0.5em;
+    border-radius: 20px 0px 0px 20px;
+    cursor: pointer;
+    color: #000000;
+    display: flex;
+    right: 0;
+    height: 75% !important;
+    top: 100px;
+    bottom: 0px;
+    align-items: center;
+}
+

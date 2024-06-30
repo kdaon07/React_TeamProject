@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import '../node_modules/react-calendar/dist/Calendar.css';
+import { useParams } from 'react-router-dom';
+import moment from 'moment';
 
-const Calendar2 = () => {
-  const [value, onChange] = useState(new Date());
-
-  return (
-    <div>
-      <Calendar
-        onChange={handleDateChange}
-        value={value}
-        formatDay={(locale, date) => moment(date).format("DD")}
-      ></Calendar>
-    </div>
-  );
-};
+export default function Detail() {
+    const { id } = useParams();
+    const date = moment(id, 'YYYYMMDD').format('YYYY-MM-DD');
+    return (
+        <div>
+            {date}
+        </div>
+    )   
+}
