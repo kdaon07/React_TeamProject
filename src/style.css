@@ -28,10 +28,19 @@ body {
     float: left;
 }
 
+.BtnBox {
+    position: absolute;
+    width: 500px;
+    float: left;
+    background-color: aqua;
+    display: flex;
+}
+
 .setBtn {
     top: 50px;
     left: 50px;
-    position: absolute;
+    margin-left: 20px;
+    display: block;
     width: 80px;
     height: 40px;
     background: white;
@@ -40,6 +49,7 @@ body {
     font-size: large;
     font-weight: bold;
     cursor: pointer;
+    z-index: 50;
 }
 
 .setBtn:hover {
@@ -148,21 +158,6 @@ body {
     color: white;
 }
 
-.aside1 {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    bottom: 100px;
-    width: 100px;
-    background: white;
-    border-radius: 0px 20px 20px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-}
-
-
 .react-calendar__navigation__prev-button {
     position: fixed;
     font-weight: 800;
@@ -197,15 +192,16 @@ body {
     align-items: center;
 }
 
-.date {
+.title {
     position: absolute;
     top: 100px;
     font-weight: 800;
-    font-size: 3.0em;
+    font-size: 2.0em;
     background: none;
     border: none;
     padding: 0 0.5em;
     height: 100%;
+    text-align: center;
 }
 
 .input-container {
