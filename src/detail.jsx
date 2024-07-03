@@ -14,11 +14,9 @@ const Detail = ({ work, setWork, num }) => {
     return (
         <div>
             <div className='box'>
-                <div>
-                    <button className='setBtn' onClick={() => navigate("/")}>메인</button>
-                    <button className='setBtn' onClick={() => navigate("/cal")}>캘린더</button>
-                    <button className='setBtn' onClick={() => console.log(value)}>세팅</button><br />
-                </div>
+                <button className='setBtn' onClick={() => navigate("/")}>메인</button>
+                <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
+                <button className='setBtn' onClick={() => console.log(value)} style={{ left: "250px" }}>세팅</button><br />
                 <span className='title'>
                     {date}
                 </span>

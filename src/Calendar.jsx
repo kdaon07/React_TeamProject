@@ -9,7 +9,7 @@ const Cal = ({value, onChange}) => {
 
   const ClickDate = (date) => {
     onChange(date);
-    const formattedDate = moment(date).format('YYYYMMDD'); // 예: 20240630
+    const formattedDate = moment(date).format('YYYYMMDD');
     navigate(`/detail/${formattedDate}`);
   };
 

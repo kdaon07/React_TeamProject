@@ -29,11 +29,10 @@ body {
 }
 
 .BtnBox {
-    position: absolute;
+    position: relative;
     width: 500px;
     float: left;
     background-color: aqua;
-    display: flex;
 }
 
 .setBtn {
@@ -50,6 +49,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     z-index: 50;
+    position: absolute;
 }
 
 .setBtn:hover {
@@ -282,6 +282,39 @@ body {
     height: 300px;
     overflow-y: auto;
     list-style: none;
+}
+
+.list1 {
+    position: absolute;
+    top: 100px;
+    width: 700px;
+    height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 10px;
+    background:#FFDADA;
+}
+
+.list2 {
+    position: absolute;
+    top: 260px;
+    width: 700px;
+    height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 10px;
+    background:#FFEEDA;
+}
+
+.list3 {
+    position: absolute;
+    top: 420px;
+    width: 700px;
+    height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 10px;
+    background:#EDF4FF;
 }
 
 .info {
