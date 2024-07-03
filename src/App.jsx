@@ -1,5 +1,5 @@
 import Rending from "./Rending.jsx"
-import Detail from "./Detail.jsx"
+import Detail from "./detail.jsx"
 import Check from "./Check.jsx"
 import moment from 'moment';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
