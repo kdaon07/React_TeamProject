@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -192,6 +192,12 @@ body {
     align-items: center;
 }
 
+.react-calendar__tile--now {
+    background: #FFDADA;
+    border-radius: 50px;
+    color: black;
+}
+
 .title {
     position: absolute;
     top: 100px;
@@ -249,6 +255,7 @@ body {
     border: 2px solid black;
     box-sizing: border-box;
     float: left;
+    cursor: pointer;
     margin: 5px;
 }
 
@@ -286,35 +293,35 @@ body {
 
 .list1 {
     position: absolute;
-    top: 100px;
+    top: 0px;
     width: 700px;
     height: 150px;
     overflow-y: auto;
     list-style: none;
     border-radius: 10px;
-    background:#FFDADA;
+    background: #FFDADA;
 }
 
 .list2 {
     position: absolute;
-    top: 260px;
+    top: 160px;
     width: 700px;
     height: 150px;
     overflow-y: auto;
     list-style: none;
     border-radius: 10px;
-    background:#FFEEDA;
+    background: #FFEEDA;
 }
 
 .list3 {
     position: absolute;
-    top: 420px;
+    top: 320px;
     width: 700px;
     height: 150px;
     overflow-y: auto;
     list-style: none;
     border-radius: 10px;
-    background:#EDF4FF;
+    background: #EDF4FF;
 }
 
 .info {
@@ -329,4 +336,11 @@ body {
     border: none;
     font-size: 30px;
     cursor: pointer;
+}
+
+.listbox {
+    position: absolute;
+    top: 180px;
+    left: 180px;
+    height: 500px;
 }

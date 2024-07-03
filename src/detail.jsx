@@ -38,6 +38,7 @@ const Detail = ({ work, setWork, num }) => {
                         setWork([
                             ...work,
                             {
+                                check: 0,
                                 num: num.current,
                                 schedule: text,
                                 Priority: Pri,

@@ -3,7 +3,7 @@ import Detail from "./detail.jsx"
 import Check from "./Check.jsx"
 import moment from 'moment';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 
 function App() {
   const [work, setWork] = useState([]);
