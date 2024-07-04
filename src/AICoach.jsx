@@ -3,8 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import moment from "moment";
 // import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./style.css";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
-const genAI = new GoogleGenerativeAI("AIzaSyD20QnZlCXCQPeZBfR9OsDBKat85xS0xMY");
+if (!API_KEY) {
+  throw new Error('API 키가 설정되지 않았습니다. .env 파일을 확인해주세요.');
+}
+
+const genAI = new GoogleGenerativeAI(API_KEY);
 
 function AICoach({ work }) {
     const [advice, setAdvice] = useState("");
