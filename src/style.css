@@ -378,3 +378,90 @@ body {
     background: #999999;
     border: 3px solid #999999;
 }
+
+.settings-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.settings-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    margin-bottom: 1.5rem;
+}
+
+.buttons button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.buttons .active {
+    background-color: #999999;
+    color: #ffffff;
+}
+
+.colors {
+    margin-bottom: 1.5rem;
+}
+
+.color-input {
+    margin-bottom: 1rem;
+}
+
+.color-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.color-input input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.home-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .settings-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .buttons button,
+    .home-button {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .color-input input {
+        font-size: 0.875rem;
+    }
+
+    .settings-content h2 {
+        font-size: 1.25rem;
+    }
+}

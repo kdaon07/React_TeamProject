@@ -10,9 +10,17 @@ const Detail = ({ work, setWork, num }) => {
     const [Pri, setPri] = useState("");
     const { id } = useParams();
     const date = moment(id, 'YYYYMMDD').format('YYYY년 MM월 DD일');
+    const [window, setWindow] = useState(false);
 
     return (
-        <div>
+        <div style={{position:"relative"}}>
+            {
+                window &&
+                <div className='AIalert'>
+                    <b>오늘의 AI 리포트가 날라왔어요!</b>
+                    <button className='setBtn2' onClick={() => navigate(`/ai/${id}`)}>보러가기</button>
+                </div>
+            }
             <div className='box'>
                 <button className='setBtn' onClick={() => navigate("/")}>메인</button>
                 <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
@@ -62,6 +70,7 @@ const Detail = ({ work, setWork, num }) => {
                     ))}
                 </ul>
             </div>
+            <button onClick={() => setWindow(true)}>테스트</button>
         </div>
     );
 }

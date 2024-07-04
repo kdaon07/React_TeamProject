@@ -4,7 +4,6 @@ import './style.css';
 import moment from 'moment';
 
 const Check = ({ work, setWork, num, today }) => {
-    const [window, setWindow] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         const changeRoute = () => {
@@ -23,18 +22,10 @@ const Check = ({ work, setWork, num, today }) => {
 
     return (
         <div style={{position:"relative"}}>
-            {
-                window &&
-                <div className='AIalert'>
-                    <b>오늘의 AI 리포트가 날라왔어요!</b>
-                    <button className='setBtn2' onClick={() => navigate("/ai")}>보러가기</button>
-                </div>
-            }
-
             <div className='box'>
                 <button className='setBtn' onClick={() => navigate("/")} style={{ background: "#999999" }}>메인</button>
                 <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
-                <button className='setBtn' onClick={() => console.log(value)} style={{ left: "250px" }}>세팅</button><br />
+                <button className='setBtn' onClick={() => navigate("/set")} style={{ left: "250px" }}>세팅</button><br />
                 <span className='title'>
                     내 손 안의 메모장, 투디에 온 걸 환영해요!<br />
                     다가오는 일정을 확인해볼까요?
