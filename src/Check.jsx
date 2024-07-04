@@ -21,7 +21,7 @@ const Check = ({ work, setWork, num, today }) => {
     }
 
     return (
-        <div style={{position:"relative"}}>
+        <div>
             <div className='box'>
                 <button className='setBtn' onClick={() => navigate("/")} style={{ background: "#999999" }}>메인</button>
                 <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
