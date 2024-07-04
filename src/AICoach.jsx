@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import moment from "moment";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+// import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./style.css";
 
 const genAI = new GoogleGenerativeAI("AIzaSyD20QnZlCXCQPeZBfR9OsDBKat85xS0xMY");

@@ -4,7 +4,6 @@ import Check from "./Check.jsx"
 import moment from 'moment';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
-import AICoach from "./AICoach.jsx";
 import Settings from "./Setting.jsx";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Check work={work} setWork={setWork} num={num} today={today} color={color}/>} />
       <Route path="/cal" element={<Rending color={color}/>} />
-      <Route path="/ai" element={<AICoach/>} />
       <Route path="/detail/:id" element={<Detail work={work} setWork={setWork} num={num} color={color}/>} />
       <Route path="/set" element={<Settings color={color} setColor={setColor}/>} />
     </Routes>
