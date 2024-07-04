@@ -12,6 +12,13 @@ const Detail = ({ work, setWork, num, color }) => {
     const date = moment(id, 'YYYYMMDD').format('YYYY년 MM월 DD일');
     const [window, setWindow] = useState(false);
 
+    const aibox = () => {
+        setTimeout(() => {
+            setWindow(true);
+        }, 5000);
+    };
+
+
     return (
         <div style={{ position: "relative" }}>
 
@@ -19,7 +26,7 @@ const Detail = ({ work, setWork, num, color }) => {
                 window &&
                 <div className='AIalert' style={{ background: color[1] }}>
                     <b>오늘의 AI 리포트가 날라왔어요!</b>
-                    <button className='setBtn2' onClick={() => navigate(`/ai/${id}`)} style={{ background: color[1] }}>보러가기</button>
+                    <button className='setBtn2' onClick={() => { navigate(`/ai/${id}`); setWindow(false); }} style={{ background: color[1] }}>보러가기</button>
                 </div>
             }
             <div className='box' style={{ background: color[1] }}>
@@ -30,14 +37,14 @@ const Detail = ({ work, setWork, num, color }) => {
                     {date}
                 </span>
                 <div className="input-container">
-                    <input type="text" className="input-field" placeholder="할 일을 입력해주세요"  style={{ background: color[1] }} onChange={(e) => {
+                    <input type="text" className="input-field" placeholder="할 일을 입력해주세요" style={{ background: color[1] }} onChange={(e) => {
                         if (e.target.value != null)
                             setText(e.target.value);
                     }} />
                     <select className='btn' onChange={(e) => {
                         if (e.target.value != null)
                             setPri(e.target.value);
-                    }}  style={{ background: color[1] }}>
+                    }} style={{ background: color[1] }}>
                         <option value="">우선순위</option>
                         <option value={3}>높음</option>
                         <option value={2}>중간</option>
@@ -54,8 +61,9 @@ const Detail = ({ work, setWork, num, color }) => {
                                 date: id,
                             },
                         ]);
+                        aibox();
                         num.current++;
-                    }}  style={{ background: color[1] }}>등록</button>
+                    }} style={{ background: color[1] }}>등록</button>
                 </div>
                 <ul className='list'>
                     {work.filter(item => item.date == id).map((item, index) => (
