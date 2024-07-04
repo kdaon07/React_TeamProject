@@ -1,8 +1,10 @@
-# React + Vite
+# 투두리스트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-Calendar를 사용한 날짜 ToDo리스트
 
-Currently, two official plugins are available:
+메인페이지: 오늘을 포함한 가까운 3일의 할일 목록을 보여줌
+캘린더: 캘린더 날짜를 눌러 디테일로 넘어갈 수 있음
+디테일: 디테일에서 그 날짜의 할일과 우선순위 설정이 가능함
+설정: 배경과 메인 색상을 정할 수 있음
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+배포 사이트 : https://react-team-project-two.vercel.app/
