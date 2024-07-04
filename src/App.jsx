@@ -4,6 +4,7 @@ import Check from "./Check.jsx"
 import moment from 'moment';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
+import AICoach from "./AICoach.jsx";
 
 function App() {
   const [work, setWork] = useState([]);
@@ -14,6 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Check work={work} setWork={setWork} num={num} today={today}/>} />
       <Route path="/cal" element={<Rending/>} />
+      <Route path="/ai" element={<AICoach/>} />
       <Route path="/detail/:id" element={<Detail work={work} setWork={setWork} num={num}/>} />
     </Routes>
   )

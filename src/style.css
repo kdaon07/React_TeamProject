@@ -10,9 +10,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .box {
@@ -343,4 +340,41 @@ body {
     top: 180px;
     left: 180px;
     height: 500px;
+}
+
+.AIalert {
+    position: absolute;
+    top: -10px;
+    left: 350px;
+    width: 400px;
+    height: 100px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    z-index: 99;
+}
+
+.setBtn2 {
+    top: 50px;
+    right: 10px;
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: white;
+    border: 3px solid #999999;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 50;
+    position: absolute;
+}
+
+.setBtn2:hover {
+    background: #999999;
+    border: 3px solid #999999;
 }

@@ -55,7 +55,6 @@ const Detail = ({ work, setWork, num }) => {
                             <span className='schedule' style={{
                                 color: item.Priority == 1 ? "black" : (item.Priority == 2 ? "orange" : "red")
                             }}>{item.schedule}</span>
-                            <button className="btn2" >수정</button>
                             <button className="btn2" onClick={() => {
                                 setWork(work.filter((item2) => item.num !== item2.num));
                             }}>삭제</button>

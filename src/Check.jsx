@@ -4,12 +4,12 @@ import './style.css';
 import moment from 'moment';
 
 const Check = ({ work, setWork, num, today }) => {
+    const [window, setWindow] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         const changeRoute = () => {
             setWork(work.filter(item => item.check === 0));
         };
-
         changeRoute();
     }, [location]);
 
@@ -22,7 +22,15 @@ const Check = ({ work, setWork, num, today }) => {
     }
 
     return (
-        <div>
+        <div style={{position:"relative"}}>
+            {
+                window &&
+                <div className='AIalert'>
+                    <b>오늘의 AI 리포트가 날라왔어요!</b>
+                    <button className='setBtn2' onClick={() => navigate("/ai")}>보러가기</button>
+                </div>
+            }
+
             <div className='box'>
                 <button className='setBtn' onClick={() => navigate("/")} style={{ background: "#999999" }}>메인</button>
                 <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
@@ -88,7 +96,7 @@ const Check = ({ work, setWork, num, today }) => {
                         ))}
                     </ul>
                 </div>
-
+                
             </div>
         </div>
     );
