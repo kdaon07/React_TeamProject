@@ -4,7 +4,7 @@ import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-const Detail = ({ work, setWork, num }) => {
+const Detail = ({ work, setWork, num, color }) => {
     const navigate = useNavigate();
     const [text, setText] = useState("");
     const [Pri, setPri] = useState("");
@@ -13,30 +13,31 @@ const Detail = ({ work, setWork, num }) => {
     const [window, setWindow] = useState(false);
 
     return (
-        <div style={{position:"relative"}}>
+        <div style={{ position: "relative" }}>
+
             {
                 window &&
-                <div className='AIalert'>
+                <div className='AIalert' style={{ background: color[1] }}>
                     <b>오늘의 AI 리포트가 날라왔어요!</b>
-                    <button className='setBtn2' onClick={() => navigate(`/ai/${id}`)}>보러가기</button>
+                    <button className='setBtn2' onClick={() => navigate(`/ai/${id}`)} style={{ background: color[1] }}>보러가기</button>
                 </div>
             }
-            <div className='box'>
-                <button className='setBtn' onClick={() => navigate("/")}>메인</button>
-                <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
-                <button className='setBtn' onClick={() => console.log(value)} style={{ left: "250px" }}>세팅</button><br />
+            <div className='box' style={{ background: color[1] }}>
+                <button className='setBtn' onClick={() => navigate("/")} style={{ background: color[1] }}>메인</button>
+                <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px", background: color[1] }}>캘린더</button>
+                <button className='setBtn' onClick={() => navigate("/set")} style={{ left: "250px", background: color[1] }}>세팅</button><br />
                 <span className='title'>
                     {date}
                 </span>
                 <div className="input-container">
-                    <input type="text" className="input-field" placeholder="할 일을 입력해주세요" onChange={(e) => {
+                    <input type="text" className="input-field" placeholder="할 일을 입력해주세요"  style={{ background: color[1] }} onChange={(e) => {
                         if (e.target.value != null)
                             setText(e.target.value);
                     }} />
                     <select className='btn' onChange={(e) => {
                         if (e.target.value != null)
                             setPri(e.target.value);
-                    }}>
+                    }}  style={{ background: color[1] }}>
                         <option value="">우선순위</option>
                         <option value={3}>높음</option>
                         <option value={2}>중간</option>
@@ -54,7 +55,7 @@ const Detail = ({ work, setWork, num }) => {
                             },
                         ]);
                         num.current++;
-                    }}>등록</button>
+                    }}  style={{ background: color[1] }}>등록</button>
                 </div>
                 <ul className='list'>
                     {work.filter(item => item.date == id).map((item, index) => (
@@ -65,12 +66,11 @@ const Detail = ({ work, setWork, num }) => {
                             }}>{item.schedule}</span>
                             <button className="btn2" onClick={() => {
                                 setWork(work.filter((item2) => item.num !== item2.num));
-                            }}>삭제</button>
+                            }} style={{ background: color[1] }}>삭제</button>
                         </li>
                     ))}
                 </ul>
             </div>
-            <button onClick={() => setWindow(true)}>테스트</button>
         </div>
     );
 }

@@ -10,15 +10,16 @@ import Settings from "./Setting.jsx";
 function App() {
   const [work, setWork] = useState([]);
   const [today, setToday] = useState(moment(new Date()).format('YYYYMMDD'));
+  const [color, setColor] = useState(["#999999", "#ffffff"]);
   const num = useRef(1);
 
   return (
     <Routes>
-      <Route path="/" element={<Check work={work} setWork={setWork} num={num} today={today}/>} />
-      <Route path="/cal" element={<Rending/>} />
+      <Route path="/" element={<Check work={work} setWork={setWork} num={num} today={today} color={color}/>} />
+      <Route path="/cal" element={<Rending color={color}/>} />
       <Route path="/ai" element={<AICoach/>} />
-      <Route path="/detail/:id" element={<Detail work={work} setWork={setWork} num={num}/>} />
-      <Route path="/set" element={<Settings/>} />
+      <Route path="/detail/:id" element={<Detail work={work} setWork={setWork} num={num} color={color}/>} />
+      <Route path="/set" element={<Settings color={color} setColor={setColor}/>} />
     </Routes>
   )
 }

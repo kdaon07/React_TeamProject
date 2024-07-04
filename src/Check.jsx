@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './style.css';
 import moment from 'moment';
 
-const Check = ({ work, setWork, num, today }) => {
+const Check = ({ work, setWork, num, today, color }) => {
     const navigate = useNavigate();
     useEffect(() => {
         const changeRoute = () => {
@@ -22,10 +22,10 @@ const Check = ({ work, setWork, num, today }) => {
 
     return (
         <div>
-            <div className='box'>
+            <div className='box' style={{ background: color[1] }}>
                 <button className='setBtn' onClick={() => navigate("/")} style={{ background: "#999999" }}>메인</button>
-                <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px" }}>캘린더</button>
-                <button className='setBtn' onClick={() => navigate("/set")} style={{ left: "250px" }}>세팅</button><br />
+                <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px", background: color[1] }}>캘린더</button>
+                <button className='setBtn' onClick={() => navigate("/set")} style={{ left: "250px", background: color[1] }}>세팅</button><br />
                 <span className='title'>
                     내 손 안의 메모장, 투디에 온 걸 환영해요!<br />
                     다가오는 일정을 확인해볼까요?
@@ -87,7 +87,7 @@ const Check = ({ work, setWork, num, today }) => {
                         ))}
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     );

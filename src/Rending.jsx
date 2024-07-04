@@ -6,17 +6,17 @@ import Cal from './Calendar';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-const Rending = ({ }) => {
+const Rending = ({ color }) => {
   const navigate = useNavigate();
   const [value, onChange] = useState(new Date());
-  
+
   return (
     <div>
-      <div className='box'>
+      <div className='box' style={{background:color[1]}}>
         <button className='setBtn' onClick={() => navigate("/")}>메인</button>
         <button className='setBtn' onClick={() => navigate("/cal")} style={{ left: "150px", background: "#999999" }}>캘린더</button>
         <button className='setBtn' onClick={() => navigate("/set")} style={{ left: "250px" }}>세팅</button><br />
-        <Cal value={value} onChange={onChange} />
+        <Cal value={value} onChange={onChange} color={color}/>
       </div>
     </div>
   );
