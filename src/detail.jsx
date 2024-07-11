@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
@@ -18,9 +18,12 @@ const Detail = ({ work, setWork, num, color }) => {
         }, 5000);
     };
 
+    useEffect(() => {
+        document.body.style.setProperty('--main-bg-color', color[0]);
+      }, [color]);
 
     return (
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative"}}>
 
             {
                 window &&

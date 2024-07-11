@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    background: #A8A8A8;
+    background: var(--main-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ body {
     margin: 0 auto;
     width: 800px;
     height: 500px;
-    background: white;
+    background: var(--calendar-bg-color);
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
@@ -67,12 +67,13 @@ body {
 .react-calendar__navigation {
     display: flex;
     justify-content: space-between;
+    background: var(--calendar-bg-color);
     align-items: center;
     height: 100px;
 }
 
 .react-calendar__navigation__prev-button:hover {
-    background-color: white;
+    background: var(--calendar-bg-color);
 }
 
 .react-calendar__navigation button {
@@ -91,7 +92,7 @@ body {
 
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
-    background-color: #ffffff;
+    background: var(--calendar-bg-color);
     color: #999999;
 }
 
@@ -159,7 +160,7 @@ body {
     position: fixed;
     font-weight: 800;
     font-size: 3.0em;
-    background: white !important;
+    background: var(--calendar-bg-color) !important;
     padding: 0.5em;
     border-radius: 0px 20px 20px 0px;
     cursor: pointer;
@@ -176,7 +177,7 @@ body {
     position: fixed;
     font-weight: 800;
     font-size: 3.0em;
-    background: white !important;
+    background: var(--calendar-bg-color) !important;
     padding: 0.5em;
     border-radius: 20px 0px 0px 20px;
     cursor: pointer;

@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'react-calendar/dist/Calendar.css'
 import { useNavigate } from 'react-router-dom';
 
-const Cal = ({value, onChange}) => {
+const Cal = ({value, onChange, color}) => {
   const navigate = useNavigate();
 
   const ClickDate = (date) => {
@@ -14,7 +14,7 @@ const Cal = ({value, onChange}) => {
   };
 
   return (
-    <div>
+    <div style={{ '--calendar-bg-color': color}}>
       <Calendar
         value={value}
         onChange={ClickDate}
