@@ -2,9 +2,37 @@
 
 React-Calendar를 사용한 날짜 ToDo리스트
 
-메인페이지: 오늘을 포함한 가까운 3일의 할일 목록을 보여줌
-캘린더: 캘린더 날짜를 눌러 디테일로 넘어갈 수 있음
-디테일: 디테일에서 그 날짜의 할일과 우선순위 설정이 가능함
-설정: 배경과 메인 색상을 정할 수 있음
+## 프로젝트 설명
+### 개발 기간 : 2024.06.29 ~ 2024.07.12
+### 팀구성 : 김다온 - 개발, 오윤찬 - 개발 및 기획, 이예흔 - 디자인
+### 제작 이유 : 기존의 투두리스트 서비스들은 각각 아쉬웠던 부분들(달력 미제공, 달력 제공시 투두리스트 미제공 등)이 존재했고 이를 해결하고자 서비스를 제작함 또한 AI를 활용한 사용자 맞춤 서비스로 사용자한테 좋은 사용감을 제공하기 위해서 제작
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/1a10eba2-68c9-46b2-8495-3c6da9f4234e)
+#### 메인 화면에서는 부분적인 투두리스트를 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/60729420-9587-441c-a8d0-50867ba3b258)
+#### 캘린더 화면에서는 캘린더API를 활용하여서 사용자가 보기 더 편한 캘린더 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/55700168-9402-414c-9287-a3d70aaa196b)
+#### 캘린더 화면에서 년도 변경 기능도 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/61061464-f63d-45cc-8339-07f06a02b8ae)
+#### 중요도 별 투두리스트 항목 생성 기능 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/7ec5b850-1be4-4b2e-861f-82e095dd0161)
+#### 투두리스트를 생성하면 AI가 분석하여 조언을 알려주는 기능 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/c0b82596-3053-43c1-b83b-1df0f19cb9fc)
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/6224ccc6-e993-4af7-81ab-90bbf3eebc33)
+#### 세팅에서 색상 변경 기능 제공
+---
+![image](https://github.com/kdaon07/React_TeamProject/assets/91408117/55082b48-956c-4c99-8514-405fca1df194)
+#### 캘린더에서 생성한 투두리스트 한번에 확인할 수 있는 기능 제공
+---
+## 오윤찬
+### 아쉬웠던 점 : 시간이 부족하여 기능적으로 부족했던 점이 많은 게 아쉽습니다. 그리고 AI를 활용하여 조언을 해주는 기능을 구현했는데 발표 10분 전에 토큰을 다 써버려서 시연을 제대로 못 한 점이 아쉽습니다.
+### 좋았던 점 : 처음 다뤄보는 Gemini Api를 기간 내 구현하여서 좋았습니다. 또한 팀원들과 잘 소통하여 구상한 결과물을 완성하여서 좋았습니다.
+### 향후 계획 : 현재 Gemini Api의 토큰을 다 사용해버려서 다른 AI를 활용하여서 이 서비스를 잘 마무리하는 게 목표입니다. 
+---
 
 배포 사이트 : https://react-team-project-two.vercel.app/
